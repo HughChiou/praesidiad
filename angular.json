@@ -9,9 +9,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/employee",
             "index": "apps/employee/src/index.html",
@@ -23,9 +21,7 @@
               "apps/employee/src/favicon.ico",
               "apps/employee/src/assets"
             ],
-            "styles": [
-              "apps/employee/src/styles.scss"
-            ],
+            "styles": ["apps/employee/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -91,9 +87,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/employee"
-          ],
+          "outputs": ["coverage/apps/employee"],
           "options": {
             "jestConfig": "apps/employee/jest.config.js",
             "passWithNoTests": true
@@ -121,13 +115,9 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": [
-            "{options.outputFile}"
-          ],
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": [
-              "apps/employee-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/employee-e2e/**/*.{js,ts}"]
           }
         }
       }
