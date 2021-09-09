@@ -1,0 +1,22 @@
+<h2>detail works!</h2>
+
+<hr />
+
+<mat-list role="list" *ngIf="employeeDetail$ | async; let details">
+  <mat-list-item role="listitem" *ngFor="let detail of details | keyvalue">
+    <div>{{ detail.key }}:</div>
+    <div>{{ detail.value }}</div>
+  </mat-list-item>
+  <!-- <mat-list-item role="listitem">
+    <div>name:</div>
+    <div>{{detail.name}}</div>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <div>salary:</div>
+    <div>{{detail.salary|currency}}</div>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <div>age:</div>
+    <div>{{detail.age}}</div>
+  </mat-list-item> -->
+</mat-list>

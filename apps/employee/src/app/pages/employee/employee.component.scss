@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.retry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.employee-list {
+  margin: auto;
+  th,
+  td {
+    padding: 0.5rem 1rem;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
+
+.actions {
+  display: flex;
+
+  button {
+    margin-right: 0.5rem;
+  }
+}

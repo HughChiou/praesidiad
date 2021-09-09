@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  max-width: 20em;
+}
