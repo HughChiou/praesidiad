@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/employee",
             "index": "apps/employee/src/index.html",
@@ -21,7 +23,9 @@
               "apps/employee/src/favicon.ico",
               "apps/employee/src/assets"
             ],
-            "styles": ["apps/employee/src/styles.scss"],
+            "styles": [
+              "apps/employee/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -64,7 +68,8 @@
               "browserTarget": "employee:build:production"
             },
             "development": {
-              "browserTarget": "employee:build:development"
+              "browserTarget": "employee:build:development",
+              "port": 4567
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +91,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/employee"],
+          "outputs": [
+            "coverage/apps/employee"
+          ],
           "options": {
             "jestConfig": "apps/employee/jest.config.js",
             "passWithNoTests": true
@@ -114,9 +121,13 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/employee-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/employee-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }

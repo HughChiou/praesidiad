@@ -1,0 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/javascript-node
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 12, 14, 16
+		"args": {
+			"VARIANT": "16"
+		}
+	},
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"[typescript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.codeActionsOnSave": {
+				"source.fixAll.eslint": true
+			}
+		},
+		"[javascript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.codeActionsOnSave": {
+				"source.fixAll.eslint": true
+			}
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"gydunhn.vsc-essentials",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"doggy8088.angular-extension-pack",
+		"pflannery.vscode-versionlens",
+		"stepsize.tech-debt-tracker",
+		"wakatime.vscode-wakatime",
+		"formulahendry.auto-complete-tag",
+		"EditorConfig.EditorConfig"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		4567
+	],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn global add synp && yarn cypress install",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+	"containerEnv": {
+		"DISPLAY": "host.docker.internal:0.0",
+		"LIBGL_ALWAYS_INDIRECT": "0"
+	}
+}
