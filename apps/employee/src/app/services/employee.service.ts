@@ -48,9 +48,6 @@ export class EmployeeService {
 
   createEmployee(employee: Employee) {
     const { salary, age } = employee;
-    const headers = new HttpHeaders();
-
-    headers.set('content-type', 'application/json');
 
     return this.httpClient.post<APIResponse>(
       `${BASE_URL}/create`,
@@ -58,19 +55,14 @@ export class EmployeeService {
         ...employee,
         salary: salary.toString(),
         age: age.toString(),
-      },
-      { headers },
+      }
     );
   }
 
   updateEmployee(id: number, employee: Employee) {
-    const headers = new HttpHeaders();
-    headers.set('Access-Control-Allow-Origin', '*');
-
     return this.httpClient.put<APIResponse>(
       `${BASE_URL}/update/${id}`,
-      employee,
-      { headers },
+      employee
     );
   }
 

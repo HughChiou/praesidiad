@@ -28,9 +28,13 @@ export class HttpInterceptorService implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     this.loading.show();
 
+    const modifiedReq = req.clone({
+      headers: req.headers.set('Content-Type', 'text/plain'),
+    });
+
     return timer(1000).pipe(
       switchMapTo(
-        next.handle(req).pipe(
+        next.handle(modifiedReq).pipe(
           timeout(5000),
           catchError((err) => {
             const { message } = err;
